@@ -4,9 +4,9 @@
 
 body {
   display: block;
-
-  width: 100%;
-  background: #ffffff;
+  margin: auto;
+  width: 75%;
+  background: #443f3f;
 }
 
 .header {
@@ -139,4 +139,5 @@ body {
 }
 .text-center {
   text-align: center;
+  text-decoration: none;
 }
