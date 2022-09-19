@@ -1,39 +1,96 @@
 <!DOCTYPE html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta charset="utf-8" />
-  <title>Login</title>
-  <link rel="shortcut icon" href="/assets/favicon.ico" />
-  <link rel="stylesheet" href="/src/login&signup.css" />
-</head>
-<body>
-  
-    <form class="form container" id="login">
-      <h1 class="form__title">LOG IN</h1>
-      <div class="form__message form__message--error"></div>
-      <div class="form__input-group">
-        <input
-          type="text"
-          class="form__input"
-          autofocus
-          placeholder="Username or email"
-        />
-        <div class="form__input-error-message"></div>
-      </div>
-      <div class="form__input-group">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in</title>
+    <style>
+      body {
+        margin: auto;
+        width: 40%;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #443f3f;
+      }
+      form {
+        border: 3px solid #f1f1f1;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #2233ed;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
+
+      .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #000000;
+      }
+
+      .container {
+        padding: 16px;
+      }
+
+      span.psw {
+        float: right;
+        padding-top: 16px;
+      }
+
+      @media screen and (max-width: 300px) {
+        span.psw {
+          display: block;
+          float: none;
+        }
+        .cancelbtn {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/action_page.php" method="post">
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required />
+
+        <label for="psw"><b>Password</b></label>
         <input
           type="password"
-          class="form__input"
-          autofocus
-          placeholder="Password"
+          placeholder="Enter Password"
+          name="psw"
+          required
         />
-        <div class="form__input-error-message"></div>
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember" /> Remember
+          me
+        </label>
       </div>
-      <button class="form__button" type="submit">Continue</button>
-      <p class="form__text">
-        <a href="#" class="form__link">Forgot your password?</a>
-      </p>
-  
-  <script src="src/login&signup.js"
-  ></script>
-</body>
+
+      <div class="container" style="background-color: #f1f1f1">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </body>
+</html>
